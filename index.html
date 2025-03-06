@@ -3,62 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Queries - Mobile & Bikes</title>
+    <title>Bike & Phone Queries</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-        h1 {
-            text-align: center;
+        
+        body {
+            background-color: #f4f4f4;
             color: #333;
         }
-        .section {
+
+        header {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0073e6;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: space-between;
             margin-bottom: 20px;
         }
-        .section h2 {
-            color: #555;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
+
+        .category {
+            flex: 1;
+            padding: 15px;
+            background: #0073e6;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            margin: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
         }
-        .link-container {
+
+        .category:hover {
+            background: #005bb5;
+        }
+
+        footer {
             text-align: center;
             margin-top: 20px;
+            padding: 10px;
+            background: #222;
+            color: white;
+            font-size: 14px;
         }
-        .link-container a {
-            text-decoration: none;
-            color: #007bff;
-            font-size: 18px;
-        }
-        .link-container a:hover {
-            text-decoration: underline;
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .categories {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
+
+    <header>Bike & Phone Queries</header>
+
     <div class="container">
-        <h1>Service Queries</h1>
-        <div class="section">
-            <h2>Mobile Services Queries</h2>
-            <p>Find solutions to your mobile-related issues, including repairs, upgrades, and troubleshooting.</p>
-        </div>
-        <div class="section">
-            <h2>Bike Services Queries</h2>
-            <p>Explore bike servicing details, maintenance tips, and repair solutions for your two-wheeler.</p>
-        </div>
-        <div class="link-container">
-            <a href="agent.md">View Agent</a>
+        <h2>Ask Your Queries</h2>
+
+        <div class="categories">
+            <div class="category">Bike Queries</div>
+            <div class="category">Phone Queries</div>
         </div>
     </div>
+
+    <footer>&copy; 2025 Bike & Phone Queries. All Rights Reserved.</footer>
+
+    <!-- Embedded Messaging Script -->
+    <script type='text/javascript'>
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+                embeddedservice_bootstrap.init(
+                    '00DKj00000EAwzP',
+                    'Knowledge_Agent_ESD',
+                    'https://nu1738425293563.my.site.com/ESWKnowledgeAgentESD1741175165575',
+                    {
+                        scrt2URL: 'https://nu1738425293563.my.salesforce-scrt.com'
+                    }
+                );
+            } catch (err) {
+                console.error('Error loading Embedded Messaging: ', err);
+            }
+        };
+    </script>
+    <script type='text/javascript' src='https://nu1738425293563.my.site.com/ESWKnowledgeAgentESD1741175165575/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 </body>
 </html>
